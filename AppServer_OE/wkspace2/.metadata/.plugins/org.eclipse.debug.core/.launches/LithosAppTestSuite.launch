@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="ablunit.launchType">
+    <stringAttribute key="ATTR_ABLUNIT_TESTCASE_NAME" value="C:\PeWkSpaces\wkspace2\LithosAppTest\tests\LithosAppTestSuite.cls"/>
+    <booleanAttribute key="ATTR_ABLUNIT_TEST_CASE_SELECTION" value="true"/>
+    <stringAttribute key="abl.client.PROVERSION" value="12.2"/>
+    <booleanAttribute key="abl.client.USE_TTY" value="false"/>
+    <booleanAttribute key="abl.databases.USE_PROJECT" value="true"/>
+    <stringAttribute key="abl.debug.ABL_PROGRAM" value="ABLUnitCore.r"/>
+    <stringAttribute key="abl.debug.ATTR_ABL_PROJECT_NAME" value="LithosAppTest"/>
+    <stringAttribute key="abl.startup.WORKING_DIRECTORY" value="C:\PeWkSpaces\wkspace2\LithosAppTest"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/LithosAppTest/tests/LithosAppTestSuite.cls"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables"/>
+</launchConfiguration>

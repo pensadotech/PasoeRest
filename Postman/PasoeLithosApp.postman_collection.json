@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "e9a1102c-f90e-4f5a-917d-6f027ef06df6",
+		"name": "PasoeLithosApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "application",
+						"type": "text",
+						"value": " application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvars",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOneGrp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "application",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvars?cfgGrp=TSTGRP01",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvars"
+					],
+					"query": [
+						{
+							"key": "cfgGrp",
+							"value": "TSTGRP01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGgroups",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "application",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvars/Groups",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvars",
+						"Groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "application",
+						"type": "text",
+						"value": " application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvar/117",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvar",
+						"117"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateOne",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "application",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request\": {\n        \"coreConfigSet\": {\n            \"updtCoreConfigTable\": [\n                {\n                    \"CfgGrp\": \"TST\",\n                    \"CfgSgrp\": \"TSTGRP\",\n                    \"KeyName\": \"TSTVAR4\",\n                    \"KeyValue\": \"abcX123\",\n                    \"Notes\": \"Key notes\"\n                }\n            ]\n        }\n    }\n}\n\n"
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvar/117",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvar",
+						"117"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOne",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "application",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvar/118",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvar",
+						"118"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOne",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "application",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request\": {\n        \"cfgGrp\": \"TST\",\n        \"cfgSgrp\": \"TSTGRP\",\n        \"keyName\": \"TSTVAR4\",\n        \"keyValue\": \"abcX123\",\n        \"keyNotes\": \"Key notes\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://PROTEUS.lan:8810/rest/LithosAppService/configvar",
+					"protocol": "http",
+					"host": [
+						"PROTEUS",
+						"lan"
+					],
+					"port": "8810",
+					"path": [
+						"rest",
+						"LithosAppService",
+						"configvar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

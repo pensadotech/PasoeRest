@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>System Configuration</title>
+    <link rel="icon" href="./assets/images/cube_molecule_preferences.png">
+    <!-- Awsome fonts and icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Bootstarap CSS -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="jumbotron text-white text-center gradBlue">
+            
+            <div class="row">  
+                <div class="col-sm4">
+                    <h1> <i class="fas fa-cogs"></i> System Configuration </h1>
+                </div>
+            
+                <div class="col-sm">
+                    <form class="filterForm">
+                        <div class="d-flex flex-row-reverse">
+                            <div class="form-group">
+                                <input class="form-control" id="filtergrp" placeholder="Group..." type="text">                    
+                            </div>
+                            <div class= "float-right">
+                                <button id="filterButton" class="btn btn-primary " type="button" onclick="">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>   
+                        </div> 
+                    </form>
+                    <!-- From sumit operation -->
+                </div>   
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="container bodyWrapper">
+
+            <!-- Row 1  ------------------------------------ -->
+            <div class="row">
+
+                <!-- Column #1  -->
+                <div class="col-sm-3">
+                    <div class="dropdown show">
+                        <a class="btn btn-success dropdown-toggle topbtn m-2" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ALL GROUPS
+                        </a>
+
+                        <div id="dropdownselector" class="dropdown-menu grpselector aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#" onclick="ChangeDropSelection('ALL GROUPS')">AllGroups</a>
+                            <!-- Dynamic group selection  -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Columne #2 -->
+                <div class="col-sm">        
+                    <!-- Add button -->
+                    <button type="button" id="addButton" class="btn btn-success topbtn flx-row-reverse m-2"
+                        data-toggle="collapse" data-target="#addVar" onclick="ClearCollapsePanel()">
+                        <i class="fas fa-plus-circle">Add Configuration</i>
+                        Add
+                    </button>
+                    <!-- Add / edit record / collapsible panel -->
+                    <div id="addVar" class="collapse">
+                        <!--Card  -->
+                        <div class="card mb-2 bg-light">
+                            <!-- Card Body -->
+                            <div class="card-body cardcolor">
+
+                                <div class="tableHeader bg-dark text-white">
+                                    <p>Configuration Variable</p>
+                                </div>
+
+                                <form class="newConfigVarForm">
+                                    <!-- Form Row #1 -->
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-4">
+                                            <label for="grp">Group<span id="grpErr" class="text-danger"></span></label>
+                                            <input class="form-control" id="tgrp" placeholder="Group ..." type="text">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="sgrp">Group Name <span id="sgrpErr"
+                                                    class="text-danger"></span></label>
+                                            <input class="form-control" id="tsgrp" placeholder="Sub Group..."
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Form Row #2 -->
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-4">
+                                            <label for="tkeyname">Variable Name <span id="keynameErr"
+                                                    class="text-danger"></span></label>
+                                            <input class="form-control" id="tkeyname" placeholder="Key Name..."
+                                                type="text">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="tkeyvalue">Variable Value
+                                                   <span id="keyvalErr" class="text-danger"></span></label>
+                                            <input class="form-control" id="tkeyvalue" placeholder="Key value..."
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <!-- Form Row #3 -->
+                                    <div class="form-row">
+                                        <div class="form-group col-sm">
+                                            <label for="tNotes">Notes 
+                                                  <span id="notesErr" class="text-danger"></span></label>
+                                            <textarea class="form-control" id="tnotes" rows="3" placeholder="Notes..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- From sumit operation -->
+                                    <button class="btn btn-primary float-right m-2" onclick="SubmitVariable()">Submit</button>
+                                    <button class="btn btn-secondary float-right m-2" onclick="CancleSumbitVariable()">Cancel</button>
+                                </form>
+
+                            </div>
+                            <!-- CArd body -->
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Add/edit variable -->
+
+                </div>
+                <!-- Columne #2 -->
+
+            </div>
+            <!-- Row 1 -->
+
+            <!-- Row 2 -->
+            <div class="row">
+
+                <!-- Column #1 -->
+                <div class="col-sm">
+
+                    <!-- Configuration table -->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Conf Grp</th>
+                                    <th scope="col">Conf Sgrp</th>
+                                    <th scope="col">Key Name</th>
+                                    <th scope="col">Key Value</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dynamic-tbl-data">
+                                <!-- Dynamic table records -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- Column #1 -->
+
+            </div>
+            <!-- Row 2 -->
+
+
+        </div>
+    </div>
+    <!-- Container end -->
+
+   <!-- Footer at the bottom of teh screen -->
+   <footer calass="footer">
+    <div class="jumbotron text-center gradBlue">
+      <p>Copyright &copy; Pensadotech</p>
+    </div>
+  </footer>
+
+    <!-- Bootstarp javascripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+    <!-- Script definitions -->
+    <script src="assets/scripts/app.js"></script>
+
+</body>
+
+</html>

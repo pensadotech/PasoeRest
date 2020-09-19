@@ -1,0 +1,3 @@
+defaultStartup=-debugalert -inp 16000 -tok 4000 -rereadnolock -s 200 -mmax 65534 -T C\:\\Temp -yy 1950 
+eclipse.preferences.version=1
+web_broker_url=http\://localhost/Scripts/cgiip.exe/WService\=wsbroker1/

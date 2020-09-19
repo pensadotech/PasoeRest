@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="ablunit.launchType">
+    <stringAttribute key="ATTR_ABLUNIT_TESTCASE_NAME" value="C:\PeWkSpaces\wkspace2\LithosAppTest\tests\CoreConfigApiTest.cls"/>
+    <booleanAttribute key="ATTR_ABLUNIT_TEST_CASE_SELECTION" value="true"/>
+    <booleanAttribute key="ATTR_ABLUNIT_TEST_FOLDER_SELECTION" value="false"/>
+    <stringAttribute key="ATTR_ABLUNIT_TEST_NAME" value=""/>
+    <booleanAttribute key="abl.client.HIDE_TTY" value="false"/>
+    <stringAttribute key="abl.client.PROVERSION" value="12.2 (64-bit)"/>
+    <booleanAttribute key="abl.databases.USE_PROJECT" value="true"/>
+    <stringAttribute key="abl.debug.ABL_PROGRAM" value="ABLUnitCore.r"/>
+    <stringAttribute key="abl.debug.ATTR_ABL_PROJECT_NAME" value="CoreConfigAppiTest"/>
+    <booleanAttribute key="abl.debug.PROPATH_USE_DEFAULT" value="true"/>
+    <stringAttribute key="abl.startup.WORKING_DIRECTORY" value="C:\PeWkSpaces\wkspace2\LithosAppTest"/>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables"/>
+</launchConfiguration>

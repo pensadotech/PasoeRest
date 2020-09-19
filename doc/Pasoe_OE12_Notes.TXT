@@ -1,0 +1,83 @@
+DATABASE CREATE : 
+
+C:\Progress\OpenEdge\bin\prostrct create Lithos Lithos.st
+C:\Progress\OpenEdge\bin\procopy C:\Progress\OpenEdge\empty Lithos
+
+OE EXPLORER CONFIGURAITION (V12.2): 
+
+* Lg/Pwd: admin/admin
+
+Location: 
+   Resources /OpenEdge/ Progress Application Server/oepas1/ABL Application: oepas1/Configuration
+   
+Agent working directory: ${CATALINA_BASE}/work
+Agent startup parameter: -T "${catalina.base}/temp" -db Lithos.db -H Localhost -S 2010 -L 10000 -B 10000 -n 800 -aibufs 40
+PROPATH : 
+  ${CATALINA_BASE}/webapps/ROOT/WEB-INF/openedge,
+  ${CATALINA_BASE}/ablapps/oepas1/openedge,
+  ${CATALINA_BASE}/openedge,${DLC}/tty,
+  ${DLC}/tty/netlib/OpenEdge.Net.pl
+
+PROPATH (single line): 
+${CATALINA_BASE}/webapps/ROOT/WEB-INF/openedge,${CATALINA_BASE}/ablapps/oepas1/openedge,${CATALINA_BASE}/openedge,${DLC}/tty,${DLC}/tty/netlib/OpenEdge.Net.pl
+
+WEBSERVICE DEPLOYMENT :
+
+1. Change to folder C:\OpenEdge\WRK\oepas1\webapps
+2. Deploy:   C:\OpenEdge\WRK\oepas1\bin\deployREST.bat LithosApp.zip ROOT 
+3. Undeploy: C:\OpenEdge\WRK\oepas1\bin\deployREST.bat LithosApp.zip ROOT -undeploy
+4. Manually deploy the code from C:\PeWkSpaces\wkspace2\LithosApp\AppServer
+   and into to: C:\OpenEdge\WRK\oepas1\openedge
+
+RUNNING :
+ * No TomCat manual execution needed. Just start the oepas1 at OE Explorer
+
+
+Base URL: http://<host>[:port]/LithosApp/rest/LithosAppService/<Resource URI>
+
+Local URL: http://PROTEUS.lan:8810
+           http://PROTEUS.lan:8810/LithosApp/rest/LithosAppService/
+
+Notes: 
+    Query string examples:  
+    https://example.com/over/there?name=ferret
+    https://example.com/path/to/page?name=ferret&color=purple
+		  
+Example URL ( for clients) :
+
+  * Note: Use POSTMAN tool to test, before includ them in a client.
+  * NOte: THis URL can be used for a .NET Client
+  * To build JavaScript client, and avoid CORE error, use the following URL locahost insted of machine name
+  
+ 	      GET:    http://PROTEUS.lan:8810/rest/LithosAppService/configvars
+		  GET:    http://PROTEUS.lan:8810/rest/LithosAppService/configvars?cfgGrp=TSTGRP01
+		  GET:    http://PROTEUS.lan:8810/rest/LithosAppService/configvars/Groups
+		  GET:    http://PROTEUS.lan:8810/rest/LithosAppService/configvar/97
+		  POST:   http://PROTEUS.lan:8810/rest/LithosAppService/configvar
+		  PUT:    http://PROTEUS.lan:8810/rest/LithosAppService/configvar/117		  
+		  DELETE: http://PROTEUS.lan:8810/rest/LithosAppService/configvar/117
+		 
+
+JavaScript Client execution
+	
+	Good:  http://localhost:8810/static/ClientJS/index.html
+	
+Note: for local execution, use localhost instead of machine name to prevent a CORS excpetion.
+For example, using thi sURL will result in a CORE error indicated below:
+	
+	NO-GOOD:  http://proteus.lan:8810/static/ClientJS/index.html
+
+    ERROR: Access to fetch at 'http://localhost:8810/rest/LithosAppService/configvars/Groups' from origin 'http://proteus.lan:8810' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+REFERENCES:	
+	
+https://knowledgebase.progress.com/articles/Article/HTTP-403-accessing-a-REST-Service
+
+// Example 4GL code 
+FOR EACH CORE_CONFIG NO-LOCK:
+ DISPLAY 
+   CORE_CONFIG.CfgGrp 
+   CORE_CONFIG.CfgSgrp 
+   CORE_CONFIG.KeyName 
+   substring(CORE_CONFIG.KeyValue,1,40).
+END.

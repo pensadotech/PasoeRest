@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/databaseConnection.xsd">
+    <databaseconnection identifier="LITHOS">
+        <name>LITHOS</name>
+        <description>Lithos database</description>
+        <physicalname>C:\PeWkSpaces\pedb\Lithos\Lithos.db</physicalname>
+        <logicalname/>
+        <aliases/>
+        <group/>
+        <host>localhost</host>
+        <service/>
+        <userID/>
+        <password/>
+        <connectionparameters/>
+        <SQLIdentifier>-ae97d38:1743ce33fd9:-7fec</SQLIdentifier>
+        <autoStartServer>true</autoStartServer>
+        <serverParameters>-db C:\PeWkSpaces\pedb\Lithos\Lithos.db -S 2010 </serverParameters>
+        <autoShutdownServer>false</autoShutdownServer>
+        <OEVersion>12.2</OEVersion>
+    </databaseconnection>
+</root>

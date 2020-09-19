@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prgs:model xmlns:prgs="http://www.progress.com/caf/camel/component/prgrs" id="resourceModel">
+  <prgs:resource consumes="application/json" name="_configvars" path="/configvars" produces="application/json">
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..GetAll" produces="application/json" verb="GET">
+      <prgs:param name="cfgGrp" type="QUERY"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_configvars_groups" path="/configvars/Groups" produces="application/json">
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..GetGroups" produces="application/json" verb="GET"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_configvar_id" path="/configvar/{id}" produces="application/json">
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..GetOneById" produces="application/json" verb="GET">
+      <prgs:param name="id" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..UpdateOne" produces="application/json" verb="PUT">
+      <prgs:param name="id" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..DeleteOne" produces="application/json" verb="DELETE">
+      <prgs:param name="id" type="PATH"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_configvar" path="/configvar" produces="application/json">
+    <prgs:operation consumes="application/json" idls="LithosApp/.services/AppServer/api/CoreConfigApi.pidl::com.progress.openedge.pdt.bpmbindings" name="api.CoreConfigApi..CreateOne" produces="application/json" verb="POST"/>
+  </prgs:resource>
+</prgs:model>

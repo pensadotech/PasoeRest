@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pidl:description targetNamespace="urn:schemas-progress-com:bpm:appserverbinding:0001" serviceType="wsad:OEAppServerInvoke" xmlns:wsad="urn:schemas-progress-com:bpm:appserverbinding:0001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pidl="http://www.progress.com/caf/idl1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://www.progress.com/adapters/idl1.0/javatype">
+<pidl:types>
+</pidl:types>
+  <pidl:interface name="com.progress.openedge.pdt.bpminterfaces">
+    <pidl:operation name="api.CoreConfigApi..CreateOne" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="cfgGrp" req="false" type="java:String">
+    </pidl:input>
+      <pidl:input messageLabel="cfgSgrp" req="false" type="java:String">
+    </pidl:input>
+      <pidl:input messageLabel="keyName" req="false" type="java:String">
+    </pidl:input>
+      <pidl:input messageLabel="keyValue" req="false" type="java:String">
+    </pidl:input>
+      <pidl:input messageLabel="keyNotes" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="api.CoreConfigApi..DeleteOne" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="uniqueID" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="api.CoreConfigApi..GetAll" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="cfgGrp" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="api.CoreConfigApi..GetGroups" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="api.CoreConfigApi..GetOneById" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="uniqueID" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="api.CoreConfigApi..UpdateOne" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="uniqueID" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:input messageLabel="coreConfigSet" req="false" type="java:Object">
+    </pidl:input>
+      <pidl:output messageLabel="pgmExec" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="successMsg" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="sucess" req="false" type="java:Boolean">
+    </pidl:output>
+      <pidl:output messageLabel="coreConfigTable" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+  </pidl:interface>
+  <pidl:binding name="com.progress.openedge.pdt.bpmbindings" interface="wsad:com.progress.openedge.pdt.bpminterfaces" type="urn:schemas-progress-com:bpm:appserverbinding:0001">
+<wsad:Operation isPersistent="false" useFullName="false" executionMode="11">
+<wsad:Name>api.CoreConfigApi</wsad:Name><wsad:ProcPath></wsad:ProcPath><wsad:ProPath></wsad:ProPath><wsad:ProcExt>cls</wsad:ProcExt><wsad:ProcDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false"><wsad:Name>api.CoreConfigApi</wsad:Name><wsad:HelpString></wsad:HelpString><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>CreateOne</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>CreateOne</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>cfgGrp</wsad:Name><wsad:OrigName>cfgGrp</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>cfgSgrp</wsad:Name><wsad:OrigName>cfgSgrp</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>keyName</wsad:Name><wsad:OrigName>keyName</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>keyValue</wsad:Name><wsad:OrigName>keyValue</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="5" writeXmlBeforeImage="false"><wsad:Name>keyNotes</wsad:Name><wsad:OrigName>keyNotes</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="6" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="7" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="8" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="9" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>DeleteOne</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>DeleteOne</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>uniqueID</wsad:Name><wsad:OrigName>uniqueID</wsad:OrigName><wsad:Type>4</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="5" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>GetAll</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>GetAll</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>cfgGrp</wsad:Name><wsad:OrigName>cfgGrp</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="5" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>GetGroups</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>GetGroups</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>GetOneById</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>GetOneById</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>uniqueID</wsad:Name><wsad:OrigName>uniqueID</wsad:OrigName><wsad:Type>4</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="5" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc><wsad:InternalProc isExcluded="false" hasBadParams="false"><wsad:Name>UpdateOne</wsad:Name><wsad:ProcType>1</wsad:ProcType><wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false"><wsad:Name>UpdateOne</wsad:Name><wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false"><wsad:Name>uniqueID</wsad:Name><wsad:OrigName>uniqueID</wsad:OrigName><wsad:Type>4</wsad:Type><wsad:Mode>1</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false"><wsad:Name>coreConfigSet</wsad:Name><wsad:OrigName>coreConfigSet</wsad:OrigName><wsad:Type>36</wsad:Type><wsad:Mode>1</wsad:Mode><wsad:DataSetMetaData><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:DataTable Name="updtCoreConfigTable" hasBeforeTable="false"></wsad:DataTable></wsad:DataSetMetaData></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false"><wsad:Name>pgmExec</wsad:Name><wsad:OrigName>pgmExec</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false"><wsad:Name>successMsg</wsad:Name><wsad:OrigName>successMsg</wsad:OrigName><wsad:Type>1</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="5" writeXmlBeforeImage="false"><wsad:Name>sucess</wsad:Name><wsad:OrigName>sucess</wsad:OrigName><wsad:Type>3</wsad:Type><wsad:Mode>2</wsad:Mode></wsad:Parameter><wsad:Parameter allowUnknown="true" ordinal="6" writeXmlBeforeImage="false"><wsad:Name>coreConfigTable</wsad:Name><wsad:OrigName>coreConfigTable</wsad:OrigName><wsad:Type>15</wsad:Type><wsad:Mode>2</wsad:Mode><wsad:NamespaceUri xsi:nil="true"></wsad:NamespaceUri><wsad:MetaData><wsad:FieldName>uniqueId</wsad:FieldName><wsad:Type>4</wsad:Type><wsad:Extent>0</wsad:Extent><wsad:TypeName>INTEGER</wsad:TypeName><wsad:XmlNodeType>0</wsad:XmlNodeType></wsad:MetaData></wsad:Parameter></wsad:MethodDetail></wsad:InternalProc></wsad:ProcDetail></wsad:Operation>  </pidl:binding>
+</pidl:description>

@@ -1,0 +1,11 @@
+PSC-SchemaCache|Sun Aug 30 12:46:50 2020|11.5.0
+CORE_CONFIGtable
+CORE_CONFIG.CfgGrp01Config Group010
+CORE_CONFIG.CfgSgrp01Config Subgroup020
+CORE_CONFIG.KeyName01Key Name030
+CORE_CONFIG.KeyValue01Key Value040
+CORE_CONFIG.ModifyBy01Modified By060
+CORE_CONFIG.ModifyDate034Modification Date?070
+CORE_CONFIG.Notes01Notes050
+CORE_CONFIG.CoreConfigIdxindextruetrue3CfgGrptrueCfgSgrptrueKeyNametrue
+CORE_CONFIG.KeyNameindexfalsefalse1KeyNametrue

@@ -1,0 +1,92 @@
+ADD TABLE "CORE_CONFIG"
+  AREA "Config_dat"
+  DESCRIPTION "System Registry Attribute. This table contains the settings for the system and is organized by a Group and an Subgroup (key) and Variable. The structure for organization purposes is SysReg -> SysRegKey -> SysRegAttr - Lithos Model"
+  DUMP-NAME "CoreConfig"
+
+ADD FIELD "CfgGrp" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Configuration Group"
+  FORMAT "x(10)"
+  INITIAL ""
+  LABEL "Config Group"
+  POSITION 2
+  MAX-WIDTH 10
+  COLUMN-LABEL "CfgGrp"
+  ORDER 10
+
+ADD FIELD "KeyName" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Configuration Key Name"
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Key Name"
+  POSITION 3
+  MAX-WIDTH 20
+  COLUMN-LABEL "KeyName"
+  ORDER 30
+
+ADD FIELD "KeyValue" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Configuration Key Value"
+  FORMAT "x(250)"
+  INITIAL ""
+  LABEL "Key Value"
+  POSITION 4
+  MAX-WIDTH 250
+  COLUMN-LABEL "KeyValue"
+  ORDER 40
+
+ADD FIELD "Notes" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Notes about the configuration keys"
+  FORMAT "X(100)"
+  INITIAL ""
+  LABEL "Notes"
+  POSITION 5
+  MAX-WIDTH 100
+  COLUMN-LABEL "Notes"
+  ORDER 50
+
+ADD FIELD "ModifyBy" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Person/system that modified last"
+  FORMAT "X(10)"
+  INITIAL ""
+  LABEL "Modified By"
+  POSITION 6
+  MAX-WIDTH 10
+  COLUMN-LABEL "MidifiedBy"
+  ORDER 60
+
+ADD FIELD "ModifyDate" OF "CORE_CONFIG" AS datetime 
+  DESCRIPTION "modification Date"
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Modification Date"
+  POSITION 7
+  MAX-WIDTH 10
+  COLUMN-LABEL "ModDate"
+  ORDER 70
+
+ADD FIELD "CfgSgrp" OF "CORE_CONFIG" AS character 
+  DESCRIPTION "Configuration Subgroup "
+  FORMAT "X(10)"
+  INITIAL ""
+  LABEL "Config Subgroup"
+  POSITION 8
+  MAX-WIDTH 10
+  COLUMN-LABEL "CfgSgrp"
+  ORDER 20
+
+ADD INDEX "CoreConfigIdx" ON "CORE_CONFIG" 
+  AREA "Config_idx"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CfgGrp" ASCENDING 
+  INDEX-FIELD "CfgSgrp" ASCENDING 
+  INDEX-FIELD "KeyName" ASCENDING 
+
+ADD INDEX "KeyName" ON "CORE_CONFIG" 
+  AREA "Config_idx"
+  INDEX-FIELD "KeyName" ASCENDING 
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000002164
