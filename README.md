@@ -20,5 +20,29 @@ This project is oriented to help Progress OpenEdge, Java Script , and .NET devel
 
 This project provides an opinion about finding a solution by adopting PASOE to implement a REST Webservice, ideas about the ABL programing required, and  how Java Script and .NET clients can interact with the Webservice. 
 
+## Project considerations
+
+This project was created using Progres OpenEdge V12, ASP.NET Core with Visual Studio 2019 community edition, and JavaScript with Microsoft Visual Studio Code version 1.49.1.
+
+All these resources can be obtaining online for free, to allow the developer have a close experience with the tools. In particular, for Progress OpenEdge, the reader need to request the demo version before she/he can download software. The DEMO version is for sixty days and the Developer Kit classroom edition for free. It is simple to request the download. 
+
+The links to obtain teh tools are listed in the refrence section.
+
+
 ## How developers can get started
 
+
+
+
+
+## References
+
+
+Microsfot Visual Studio and Visual Studio code links 
+* https://visualstudio.microsoft.com/downloads/
+* https://code.visualstudio.com/download
+
+
+Progress OpenEdge Links 
+* https://www.progress.com/openedge
+* https://www.progress.com/openedge/classroom-edition
