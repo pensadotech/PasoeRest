@@ -1,4 +1,4 @@
-# Create and Configure a new database
+# PASOE Rest WebService - Create and Configure a Progress OE database
 
 This section takes the reader to the steps to create and configure a new database to run as multi-user in a local compuer, required to execute the project. 
 
@@ -38,12 +38,12 @@ _by Armando Pensado_
 ```
 
 
-![MainPage](../docimgs/database/DatabaseAdminConnect.png)
+![DatabaseAdminConnect](../docimgs/database/DatabaseAdminConnect.png)
 
 
 **Step 7** - Load schema definitions by coping the provided DF file into the folder where the database is located, **DatabaseDefs\Lithos.df**, and using the _Database Administration_ Tool, go to **admin menu -> Load data and definitions -> Data Definitions (.df file)**, and load the file. The schema load can be verified under **Database -> Reports**. A single table will be loaded  : **CORE_CONFIG**.
 
-![MainPage](../docimgs/database/DatabaseAdminLoadDf.png)
+![DatabaseAdminLoadDf](../docimgs/database/DatabaseAdminLoadDf.png)
 
 
 **Step 9** – Load example data by copying the provided D file into the folder where the DB resides, **DatabaseDefs\CoreConfig.d**, and using the _Database Administration_ Tool, go to  **admin menu -> Load data and definitions -> Table Contents (.d file)**, and load it. The data load can be verified by closing the Database Administration Tool, and opening the _AppBuilder_. Connect to the database using the full path. **Using Tools -> New Procedure Window**, se the following code to visualize the data in the **C**ORE_CONFIG** table,
@@ -58,7 +58,7 @@ FOR EACH CORE_CONFIG NO-LOCK:
 END.
 ```
 
-![MainPage](../docimgs/database/ValidateData.png)
+![ValidateData](../docimgs/database/ValidateData.png)
 
 
 
@@ -73,13 +73,13 @@ END.
 * Progress OpenEdge AdminServer Service 12.2 (64-bit)
 * Progress OpenEdge Management Service 12.2
 
-![MainPage](../docimgs/database/ProgressSericesRunning.png)
+![ProgressWinServices](../docimgs/database/ProgressSericesRunning.png)
 
 **Step 2** – Open OE Explorer. For a brand new installation the initial login and password will be the word “**admin**”. For a this exercise in a local computer the password can remain as it is or if preferred, change the password. The OE Explorer will show some resources already created. But will ne no database.
 
 **Step 3** – Add the a database by selecting from the menu **Resources -> Database**. A dialog will request the fundamental parameters for a database. For the purpose of this exercise, provide the _database name_, _database full path_ and a _Database TCP/IP port_.  The broker type should remain as *Both*.
 
-![MainPage](../docimgs/database/OEExpl_NewDb.png)
+![NewDatabase](../docimgs/database/OEExpl_NewDb.png)
 
 **Step 4** – At this point the database can be started, and it will become a multi-user database. In other words, several clients can connect at the same time to the database.
 
