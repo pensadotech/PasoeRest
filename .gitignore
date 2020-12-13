@@ -417,3 +417,4 @@ DataDigger/DataDigger*.log
 # Progress Open Edge
 *.r
 *.pl
+results.xml
