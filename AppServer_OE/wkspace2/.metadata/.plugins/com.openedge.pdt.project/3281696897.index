@@ -1,7 +1,14 @@
 <?xml version="1.0" ?>
-<libraryinfo path="C:/PeWkSpaces/wkspace2/LithosAppTest/tests" type="PathEntry" ModificationStamp="1599948251563" FullName="tests" lib_header_magic_number="2384638594569" lib_header_version="15">
+<libraryinfo path="C:/PeWkSpaces/wkspace2/LithosAppTest/tests" type="PathEntry" ModificationStamp="1606001334693" FullName="tests" lib_header_magic_number="2384638594569" lib_header_version="15">
 	<procedures>
 	</procedures>
 	<classes>
+		<pacakage name="">
+			<class name="CoreConfigApiTest" SourceFilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/CoreConfigApiTest.cls" RfilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/CoreConfigApiTest.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="" ImportedPackages=""></class>
+			<class name="LithosAppTestSuite" SourceFilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/LithosAppTestSuite.cls" RfilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/LithosAppTestSuite.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="" ImportedPackages=""></class>
+		</pacakage>
+		<pacakage name="mock">
+			<class name="mock.CoreConfigRepositoryMock" SourceFilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/mock/CoreConfigRepositoryMock.cls" RfilePath="C:/PeWkSpaces/wkspace2/LithosAppTest/tests/mock/CoreConfigRepositoryMock.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="domain.interfaces.ICoreConfigRepositoryæ" ImportedPackages=""></class>
+		</pacakage>
 	</classes>
 </libraryinfo>

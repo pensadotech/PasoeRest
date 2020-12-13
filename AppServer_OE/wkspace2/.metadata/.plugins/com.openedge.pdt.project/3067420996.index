@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<libraryinfo path="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer" type="PathEntry" ModificationStamp="1606001293187" FullName="AppServer" lib_header_magic_number="2384638594569" lib_header_version="15">
+	<procedures>
+	</procedures>
+	<classes>
+		<pacakage name="dataAccess">
+			<class name="dataAccess.CoreConfigRepository" SourceFilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/dataAccess/CoreConfigRepository.cls" RfilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/dataAccess/CoreConfigRepository.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="domain.interfaces.ICoreConfigRepositoryæ" ImportedPackages=""></class>
+		</pacakage>
+		<pacakage name="domain.interfaces">
+			<class name="domain.interfaces.ICoreConfigApi" SourceFilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/domain/interfaces/ICoreConfigApi.cls" RfilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/domain/interfaces/ICoreConfigApi.r" Abstract="false" Final="false" isInterface="true" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="" ImportedPackages=""></class>
+			<class name="domain.interfaces.ICoreConfigRepository" SourceFilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/domain/interfaces/ICoreConfigRepository.cls" RfilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/domain/interfaces/ICoreConfigRepository.r" Abstract="false" Final="false" isInterface="true" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="" ImportedPackages=""></class>
+		</pacakage>
+		<pacakage name="api">
+			<class name="api.CoreConfigApi" SourceFilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/api/CoreConfigApi.cls" RfilePath="C:/PeWkSpaces/wkspaceAPI2/LithosApp/AppServer/api/CoreConfigApi.r" Abstract="false" Final="false" isInterface="false" isSerializable="false" SuperClassName="Progress.Lang.Object" InterfaceNames="domain.interfaces.ICoreConfigApiæ" ImportedPackages=""></class>
+		</pacakage>
+	</classes>
+</libraryinfo>
